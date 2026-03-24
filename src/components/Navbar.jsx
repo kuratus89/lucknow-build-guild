@@ -25,15 +25,14 @@ const Navbar = () => {
         : "bg-transparent"
     }`}>
       <div className="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
-        <Link to="/" className="flex items-center gap-2">
+
+        {/* Logo — bigger, no text beside it */}
+        <Link to="/">
           <img
-            src="/img/Blueprint Lucknow Guild.png"
+            src="/img/homepage_logo-3585630b.webp"
             alt="Blueprint Lucknow Guild"
-            className="h-9 w-9 object-contain rounded-lg"
+            className="h-12 w-auto object-contain"
           />
-          <span className="text-white font-bold text-sm hidden sm:block leading-tight">
-            Blueprint<br />Lucknow Guild
-          </span>
         </Link>
 
         <div className="hidden md:flex items-center gap-6">
