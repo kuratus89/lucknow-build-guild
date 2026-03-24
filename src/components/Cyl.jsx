@@ -20,9 +20,7 @@ const Cyl = () => {
         <cylinderGeometry args={[2, 2, 2, 30, 30, true]} />
         <meshStandardMaterial
           map={texture}
-          alphaMap={texture}
           opacity={1}
-          alphaTest={0.01}
           side={THREE.DoubleSide}
         />
       </mesh>
