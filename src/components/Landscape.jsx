@@ -7,24 +7,33 @@ import Herosec from './Herosec'
 
 const Landscape = () => {
   return (
-    <div className='relative w-screen h-screen overflow-hidden'>
-      <Canvas
-        className='absolute inset-0 z-20'
-        style={{ left: '30%', width: '70%' }}
-        camera={{ fov: 55 }}
-        gl={{ alpha: true }}
-      >
-        <OrbitControls enableZoom={false} enablePan={false} />
-        <ambientLight intensity={1.2} />
-        <Cyl />
-        <EffectComposer>
-          <Bloom mipmapBlur intensity={0.2} luminanceThreshold={0.8} />
-        </EffectComposer>
-      </Canvas>
+    <div className='relative w-screen min-h-screen overflow-hidden flex flex-col md:block'>
 
-      <div className='absolute inset-0 z-10'>
+      {/* Hero text — full width on mobile, left 60% on desktop */}
+      <div className='relative z-10 w-full md:absolute md:inset-0'>
         <Herosec />
       </div>
+
+      {/* 3D Cylinder — below text on mobile, right side on desktop */}
+      <div className='
+        relative z-20
+        w-full h-[50vw]
+        md:absolute md:top-0 md:right-0 md:w-[55%] md:h-full
+      '>
+        <Canvas
+          className='w-full h-full'
+          camera={{ fov: 55 }}
+          gl={{ alpha: true }}
+        >
+          <OrbitControls enableZoom={false} enablePan={false} />
+          <ambientLight intensity={1.2} />
+          <Cyl />
+          <EffectComposer>
+            <Bloom mipmapBlur intensity={0.2} luminanceThreshold={0.8} />
+          </EffectComposer>
+        </Canvas>
+      </div>
+
     </div>
   )
 }
