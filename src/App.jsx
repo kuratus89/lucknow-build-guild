@@ -8,7 +8,7 @@ import About from "./Pages/About";
 
 const App = () => {
   return (
-    <div className="grid-bg relative overflow-x-hidden min-h-screen">
+    <div className="grid-bg min-h-screen relative overflow-x-hidden">
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />

@@ -8,7 +8,7 @@ const organizers = [
 ]
 
 const About = () => (
-  <div className="w-full min-h-screen bg-[#0A365D] flex flex-col">
+  <div className="w-full min-h-screen bg-transparent flex flex-col">
     <div className="pt-24 pb-16 px-6 md:px-16 max-w-6xl mx-auto w-full flex-1">
       <h1 className="text-4xl md:text-7xl font-extrabold text-[#FACC15] mb-4">MEET THE TEAM</h1>
       <p className="text-white/60 text-base md:text-lg mb-16 max-w-2xl">

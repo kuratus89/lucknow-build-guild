@@ -1,16 +1,20 @@
 import React from 'react'
 import Landscape from '../components/Landscape'
 import Patti from '../components/Patti'
-import Contact from '../components/Contact'
+import Workshops from '../components/Workshops'
+import Timeline from '../components/Timeline'
 import Robo from '../components/Robo'
+import Contact from '../components/Contact'
 
 const Home = () => {
   return (
-    <div className='relative overflow-x-hidden bg-[#0A365D]'>
-      <Landscape/>
-      <Patti/>
-      <Robo/>
-      <Contact/>
+    <div className='relative overflow-x-hidden'>
+      <Landscape />
+      <Patti />
+      <Workshops />
+      <Timeline />
+      <Robo />
+      <Contact />
     </div>
   )
 }

@@ -33,7 +33,7 @@ const FAQItem = ({ q, a, index }) => {
 };
 
 const FAQs = () => (
-  <div className="w-full min-h-screen bg-[#0A365D] flex flex-col">
+  <div className="w-full min-h-screen bg-transparent flex flex-col">
     <div className="pt-24 pb-16 px-6 md:px-12 max-w-4xl mx-auto w-full flex-1">
       <h1 className="text-6xl md:text-8xl font-extrabold text-[#FACC15] mb-2">FAQ</h1>
       <p className="text-white/50 mb-12 text-sm">Everything you need to know about the event.</p>
