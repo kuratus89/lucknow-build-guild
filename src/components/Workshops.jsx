@@ -3,29 +3,30 @@ import React, { useState } from 'react'
 const workshops = [
   {
     number: "01",
-    title: "Electronics & Soldering",
+    title: "Blinky",
     time: "11:00 AM – 1:00 PM",
     tags: ["Beginner Friendly", "Hands-on", "Take Home"],
     color: "#FACC15",
-    desc: "Learn the fundamentals of electronics from scratch. Understand circuits, components, and PCB basics — then actually solder something real.",
+    desc: "Learn the fundamentals of electronics from scratch. Understand circuits and components — then actually solder something real.",
     details: [
       "No prior experience needed",
       "All tools and components provided",
       "You keep what you build",
       "Safety briefing included",
     ],
-    software: ["EasyEDA", "TinkerCAD"],
+    software: ["Soldering Iron", "Bare PCB"],
+    
   },
   {
     number: "02",
-    title: "Build a Gaming Console",
+    title: "Keychain Gaming Console",
     time: "2:00 PM – 4:00 PM",
-    tags: ["Arduino", "PCB Design", "3D Modeling"],
+    tags: ["ESP32", "PCB Design", "3D Modeling"],
     color: "#38BDF8",
     desc: "Program a handheld gaming console using Arduino IDE. Design its PCB on EasyEDA and model a case in TinkerCAD — full stack hardware.",
     details: [
       "Arduino IDE setup walkthrough",
-      "EasyEDA for PCB schematic",
+      "EasyEDA for schematic & PCB ",
       "TinkerCAD for the enclosure",
       "Save project to GitHub",
     ],
