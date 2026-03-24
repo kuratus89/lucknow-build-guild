@@ -4,7 +4,7 @@ import * as THREE from 'three'
 import { useFrame } from '@react-three/fiber'
 
 const Cyl = () => {
-  const texture = useTexture('/pic/img.png')
+  const texture = useTexture('/pic/img_low.png')
   const cyl = useRef(null)
 
   useFrame((_, delta) => {
