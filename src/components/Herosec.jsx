@@ -7,7 +7,7 @@ const Herosec = () => {
         
         {/* Event badge */}
         <div className="flex flex-wrap gap-2 mb-6">
-          {["April 19 ,Lucknow"].map(tag => (
+          {["April 19 ,Lucknow","Venue: TBA"].map(tag => (
             <span key={tag} className="bg-[#657795]/30 border border-[#657795]/50 text-white/70 text-xs font-semibold px-3 py-1 rounded-full tracking-wide">
               {tag}
             </span>
