@@ -45,6 +45,10 @@ const Contact = () => {
                 <FontAwesomeIcon icon={faEnvelope} className="w-4" />
                 lucknowguild@gmail.com
               </a>
+              <a href = "mailto:krishnasingh592007@gmail.com" className="flex item-center gap-3 text-white/60 hover:text-white transition-colors text-sm">
+              <FontAwesomeIcon icon = {faEnvelope} className = "w-4"/>
+              krishnasingh592007@gmail.com
+              </a>
             </div>
 
             <div>
