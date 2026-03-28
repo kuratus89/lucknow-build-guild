@@ -5,6 +5,7 @@ import React from 'react'
 const sponsors = [
   { name: "EasyEDA", logo: "/img/EasyEDA_Vert_W_Trans.png", url: "https://easyeda.com/" },
   { name: "JLCPCB", logo: "/img/JLCPCB-logo-white-Trans.png", url: "https://jlcpcb.com/" },
+  { name: "OSHWLab", logo: "/img/OSHWLab_Vert_W_Trans.png", url: "https://oshwlab.com/" },
   {name : ".XYZ" , logo :"img/xyz-logo-white.png" , url:"https://gen.xyz/a/146690"}
 
 ]
