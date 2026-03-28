@@ -37,12 +37,12 @@ const Contact = () => {
                 </a>
 
                 <a href = "https://discord.gg/H3t9xsKypW" target = "_blank" rel = "noopener noreferrer" className= "flex items-center gap-3 text-white/60 hover:text-white transition-colors text-sm">
-                <FontAwesomeIcon icon={byPrefixAndName.fab['discord']} />
+                {/* <FontAwesomeIcon icon={byPrefixAndName.fab['discord']} /> */}
                 Build guild lucknow
                 </a>
 
                 <a href = "https://chat.whatsapp.com/GVzFtU0yuuT0LNTpQdXzUq" target = "_blank" rel = "noopener noreferrer" className = "flex items-center gap-3 text-white/60 hover:text-white transition-colors text-sm">
-                <FontAwesomeIcon icon={byPrefixAndName.fab['whatsapp']} />
+                {/* <FontAwesomeIcon icon={byPrefixAndName.fab['whatsapp']} /> */}
                 Build guild lucknow
                 </a>
               </div>
