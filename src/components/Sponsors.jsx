@@ -2,7 +2,12 @@ import React from 'react'
 
 // Add sponsor logos here as they come in:
 // { name: "Sponsor Name", logo: "/img/sponsor-logo.png", url: "https://..." }
-const sponsors = [{ name: "EasyEDA", logo: "/img/EasyEDA_Vert_W_Trans.png", url: "https://easyeda.com/" },{ name: "JLCPCB", logo: "/img/JLCPCB-logo-white-Trans.png", url: "https://jlcpcb.com/" }]
+const sponsors = [
+  { name: "EasyEDA", logo: "/img/EasyEDA_Vert_W_Trans.png", url: "https://easyeda.com/" },
+  { name: "JLCPCB", logo: "/img/JLCPCB-logo-white-Trans.png", url: "https://jlcpcb.com/" },
+  {name : ".XYZ" , logo :"img/xyz-logo-white.png" , url:"https://gen.xyz/a/146690"}
+
+]
 
 const Sponsors = () => {
   return (
