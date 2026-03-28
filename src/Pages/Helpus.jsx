@@ -6,6 +6,7 @@ const ways = [
   { title: "Mentor a Workshop", desc: "Have hardware or software skills? Come spend a day teaching teens. We handle everything else.", icon: "🛠️" },
   { title: "Spread the Word", desc: "Share our event with schools, colleges, and maker communities in Lucknow.", icon: "📢" },
   { title: "Donate Components", desc: "Have spare electronics, PCBs, or tools gathering dust? Donate them for the workshops.", icon: "📦" },
+  {title : "Become a volunteer", desc: "Be a part of our event and help shape an impactful and successful experience." , icon:"🤝"},
 ]
 
 const Helpus = () => (
