@@ -1,7 +1,7 @@
 import React from 'react'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
-import { faInstagram, faSlack } from "@fortawesome/free-brands-svg-icons";
+import { faInstagram, faSlack  , faDiscord , faWhatsapp} from "@fortawesome/free-brands-svg-icons";
 
 const Contact = () => {
   return (
@@ -37,12 +37,12 @@ const Contact = () => {
                 </a>
 
                 <a href = "https://discord.gg/H3t9xsKypW" target = "_blank" rel = "noopener noreferrer" className= "flex items-center gap-3 text-white/60 hover:text-white transition-colors text-sm">
-                {/* <FontAwesomeIcon icon={byPrefixAndName.fab['discord']} /> */}
+                <FontAwesomeIcon icon={faDiscord} className="w-4"/>
                 Build guild lucknow
                 </a>
 
                 <a href = "https://chat.whatsapp.com/GVzFtU0yuuT0LNTpQdXzUq" target = "_blank" rel = "noopener noreferrer" className = "flex items-center gap-3 text-white/60 hover:text-white transition-colors text-sm">
-                {/* <FontAwesomeIcon icon={byPrefixAndName.fab['whatsapp']} /> */}
+                <FontAwesomeIcon icon={faWhatsapp} className = "w-4"/>
                 Build guild lucknow
                 </a>
               </div>
