@@ -64,6 +64,17 @@ const Herosec = () => {
           </a>
         </div>
 
+        <div className = "flex flex-wrap gap-4 mb-8">
+
+          <a href="https://chat.whatsapp.com/GVzFtU0yuuT0LNTpQdXzUq" className= "border border-[#FACC15]/50 text-[#FACC15] font-bold text-base px-7 py-3.5 rounded hover:bg-[#FACC15]10 transition-colors">
+          Whasapp
+          </a>
+          
+          <a  href = "https://discord.gg/H3t9xsKypW" className = "border border-[#FACC15]/50 text-[#FACC15] font-bold text-base px-7 py-3.5 rounded hover:bg-[#FACC15]10 transition-colors">
+          Discord
+          </a>
+        </div>
+
         <div className="mb-6">
           <p className="text-white/40 text-xs uppercase tracking-widest mb-3">Event starts in</p>
           <Countdown />
