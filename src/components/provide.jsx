@@ -6,7 +6,7 @@ const Provide = () => {
             <h2 className = "text-3xl md:text-5xl  font-extrabold text-[#FACC15] mb-8">
                 What will we provide?
             </h2>
-            <div className = "grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className = "grid grid-cols-2 md:grid-cols-2 gap-6">
 
                 <div className= "bg-white/5 border border-[#657795]30 rounded-2xl p-6 hover:border-[#FACC15]/50 transition-colors">
                 <span className = "text-4xl mb-4 block">
@@ -44,6 +44,18 @@ const Provide = () => {
                 </h3>
                 <p className = "text-white/60 text-sm leading-relaxed">
                 Every participant will receive a free .XYZ domain for an entire year , thanks to gen.xyz
+                </p>
+                </div>
+
+                <div className = "bg-white/5 border border-[#657795]/30 rounded-2xl p-6 hover:border-[#FACC15]/50 transition-colors">
+                <span className = "text-4xl mb-4 block">
+                    🎁
+                </span>
+                <h3 className  ="text-white font-bold text-xl mb-2">
+                    Gifts!
+                </h3>
+                <p className = "text-white/60 text-sm leading-relaxed">
+                ahh , i cant tell you about this! its a secret!
                 </p>
                 </div>
             </div>
