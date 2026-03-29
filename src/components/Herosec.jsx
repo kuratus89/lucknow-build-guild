@@ -52,6 +52,9 @@ const Herosec = () => {
         <p className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-[#FACC15] mb-8">
           For free!
         </p>
+        <h2 className="text-lg sm:text-xl md:text-2xl font-semibold text-white/80 mb-4 leading-snug">
+        Only for teenagers 13-18 year old!
+        </h2>
   
 
         <div className="flex flex-wrap gap-4 mb-8">
