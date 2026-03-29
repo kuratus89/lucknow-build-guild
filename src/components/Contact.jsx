@@ -35,16 +35,6 @@ const Contact = () => {
                   <FontAwesomeIcon icon={faSlack} className="w-4" />
                   #build-guild-lucknow
                 </a>
-
-                <a href = "https://discord.gg/H3t9xsKypW" target = "_blank" rel = "noopener noreferrer" className= "flex items-center gap-3 text-white/60 hover:text-white transition-colors text-sm">
-                <FontAwesomeIcon icon={faDiscord} className="w-4"/>
-                Build guild lucknow
-                </a>
-
-                <a href = "https://chat.whatsapp.com/GVzFtU0yuuT0LNTpQdXzUq" target = "_blank" rel = "noopener noreferrer" className = "flex items-center gap-3 text-white/60 hover:text-white transition-colors text-sm">
-                <FontAwesomeIcon icon={faWhatsapp} className = "w-4"/>
-                Build guild lucknow
-                </a>
               </div>
             </div>
 
