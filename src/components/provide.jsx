@@ -58,6 +58,18 @@ const Provide = () => {
                 ahh , i cant tell you about this! its a secret!
                 </p>
                 </div>
+                
+                <div className = "bg-white/5 border border-[#657795]/30 rounded-2xl p-6 hover:border-[#FACC15]/50 transition-colors">
+                <span className = "text-white font-bold text-xl mb-2">
+                    🧰
+                </span>
+                <h3 className = "text-white font-bold text-xl mb-2">
+                    Free 15$ coupon
+                </h3>
+                <p className = "text-white/60 text-sm leading-relaxed">
+                Every participant will receive a 15$ jlcpcb coupon , from which you can order your own custom pcb 
+                </p>
+                </div>
             </div>
         </section>
     )
