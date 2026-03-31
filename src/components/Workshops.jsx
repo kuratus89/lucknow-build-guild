@@ -22,7 +22,7 @@ const workshops = [
     title: "Keychain Gaming Console",
     time: "2:00 PM – 4:00 PM",
     tags: ["ESP32", "PCB Design", "3D Modeling"],
-    color: "#38BDF8",
+    color: "#FACC15",
     desc: "Program a handheld gaming console using Arduino IDE. Design its PCB on EasyEDA and model a case in TinkerCAD — full stack hardware.",
     details: [
       "Arduino IDE setup walkthrough",
