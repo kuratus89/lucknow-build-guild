@@ -14,35 +14,35 @@ const perks = [
     title: "Food & Drinks",
     desc: "Free lunch, tasty snacks, and plenty of caffeine to keep your creativity flowing all day long.",
     tag: "Free lunch",
-    tagColor: "#4ADE80",
+    tagColor: "#FACC15",
   },
   {
     icon: "🌐",
     title: "Free .XYZ Domain",
     desc: "Every participant gets a free .XYZ domain for an entire year, thanks to gen.xyz.",
     tag: "Worth $12",
-    tagColor: "#38BDF8",
+    tagColor: "#FACC15",
   },
   {
     icon: "🎁",
     title: "Surprise Gifts",
     desc: "We can't tell you what it is — but trust us, you'll want to show up just for this.",
     tag: "Secret 🤫",
-    tagColor: "#F472B6",
+    tagColor: "#FACC15",
   },
   {
     icon: "🛒",
     title: "Free $15 JLCPCB Coupon",
     desc: "Every participant gets a $15 JLCPCB coupon to order your very own custom PCB after the event.",
     tag: "Worth $15",
-    tagColor: "#FB923C",
+    tagColor: "#FACC15",
   },
   {
     icon: "🤝",
     title: "Community",
     desc: "Meet teen makers and tinkerers from Lucknow. Build your network and find future collaborators.",
     tag: "Hack Club",
-    tagColor: "#A78BFA",
+    tagColor: "#FACC15",
   },
 ]
 
@@ -54,7 +54,7 @@ const Perks = () => {
           What will we <span className="text-[#FACC15]">provide?</span>
         </h2>
         <p className="text-white/40 text-sm md:text-base max-w-xl">
-          Everything is free. No hidden costs. Show up empty handed, leave with projects, swag, and new friends.
+          Everything is free. No hidden costs. Just show up with your laptop, leave with projects, swag, and new friends.
         </p>
       </div>
 
