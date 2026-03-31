@@ -13,9 +13,9 @@ const faqs = [
   { q: "What else happens besides the workshops?", a: "Open discussions, fun activities, and time to meet and network with other teen makers and tinkerers from Lucknow. It's as much a community meetup as it is a workshop." },
   { q: "Is it really free?", a: "100%. No registration fee, no material fee, no hidden charges. Sponsored by Hack Club." },
   { q: "How do I sign up?", a: "Scan the QR code on the event poster or visit: blueprint.hackclub.com/guilds/invite/lucknow" },
-  { q: "Who are the organizers?", a: "The event is organized by Shaurya Ashu, Atharv Shukla, and Krishna Singh from Hack Club. Reach them at lucknowguild@gmail.com." },
+  { q: "Who are the organizers?", a: "The event is organized by Shaurya Ashu, Atharv Shukla, and Krishna Singh from Hack Club. Reach them at lucknow@blueprint.hackclub.com." },
   { q: "Is this event safe for my child?", a: "Yes. The event is organized specifically for teens aged 13–18 in a structured, mentor-supervised workshop environment. Safety instructions — particularly around soldering — will be given before any hands-on work begins, and organizers will be present throughout the day." },
-  { q: "How do I reach the organizers?", a: "Email lucknowguild@gmail.com or reach out on Slack at #build-guild-lucknow." },
+  { q: "How do I reach the organizers?", a: "Email lucknow@blueprint.hackclub.com or reach out on Slack at #build-guild-lucknow." },
 ];
 
 const FAQItem = ({ q, a, index }) => {

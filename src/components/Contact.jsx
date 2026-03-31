@@ -40,10 +40,10 @@ const Contact = () => {
 
             <div>
               <h3 className="text-[#FACC15] text-xs font-bold tracking-widest uppercase mb-5">Contact</h3>
-              <a href="mailto:lucknowguild@gmail.com"
+              <a href="mailto:lucknow@blueprint.hackclub.com"
                 className="flex items-center gap-3 text-white/60 hover:text-white transition-colors text-sm">
                 <FontAwesomeIcon icon={faEnvelope} className="w-4" />
-                lucknowguild@gmail.com
+                lucknow@blueprint.hackclub.com
               </a>
               
             </div>

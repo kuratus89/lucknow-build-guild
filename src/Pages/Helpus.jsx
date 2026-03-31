@@ -30,9 +30,9 @@ const Helpus = () => (
       <div className="bg-[#FACC15] rounded-2xl p-8 md:p-12 text-center max-w-2xl mx-auto">
         <h2 className="text-[#0A365D] font-extrabold text-2xl md:text-3xl mb-3">Get in touch</h2>
         <p className="text-[#0A365D]/70 mb-6">Reach out to us and we'll figure out the best way you can help.</p>
-        <a href="mailto:lucknowguild@gmail.com"
+        <a href="mailto:lucknow@blueprint.hackclub.com"
           className="inline-block bg-[#0A365D] text-white font-bold px-8 py-3 rounded hover:bg-[#0c4a8a] transition-colors">
-          lucknowguild@gmail.com
+          lucknow@blueprint.hackclub.com
         </a>
       </div>
     </div>
