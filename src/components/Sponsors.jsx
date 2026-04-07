@@ -24,11 +24,11 @@ const Sponsors = () => {
         </div>
 
         {sponsors.length > 0 ? (
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+          <div className="flex flex-wrap justify-center md:justify-start gap-4">
             {sponsors.map((s) => (
               <a key={s.name} href={s.url} target="_blank" rel="noopener noreferrer"
-                className="bg-white/5 border border-[#657795]/20 rounded-xl p-6 flex items-center justify-center hover:border-[#657795]/50 hover:bg-white/8 transition-all group">
-                <img src={s.logo} alt={s.name} className="max-h-10 max-w-full object-contain opacity-60 group-hover:opacity-100 transition-opacity grayscale group-hover:grayscale-0" />
+                className="w-full sm:w-[calc(50%-8px)] md:w-[calc(33.33%-11px)] lg:w-[calc(25%-12px)] bg-white/5 border border-[#657795]/20 rounded-xl p-6 flex items-center justify-center hover:border-[#657795]/50 hover:bg-white/8 transition-all group min-h-[100px]">
+                <img src={s.logo} alt={s.name} className="max-h-12 max-w-full object-contain opacity-60 group-hover:opacity-100 transition-opacity grayscale group-hover:grayscale-0" />
               </a>
             ))}
           </div>
