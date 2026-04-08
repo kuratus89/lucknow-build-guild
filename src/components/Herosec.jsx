@@ -73,6 +73,11 @@ const Herosec = () => {
           Instagram
           </a>
         </div>
+        <div className = "flex flex-wrap gap-4 mb-8">
+          <a href = "https://maps.app.goo.gl/XbxCHNpcfV8uET5N8" className = "border border-[#FACC15]/50 text-[FACC15] font-bold text-base px-7 py-3.5 rounded hover:bg-[#FACC15]/10 transition-colors">
+          Venue
+          </a>
+        </div>
 
         <div className="mb-6">
           <p className="text-white/40 text-xs uppercase tracking-widest mb-3">Event starts in</p>
@@ -80,7 +85,7 @@ const Herosec = () => {
         </div>
 
         <div className="flex flex-wrap gap-4 pt-6 border-t border-[#657795]/30">
-          {[["", "April 19, 2026"], ["", "Lucknow"], ["", "Venue: TBA"]].map(([icon, text]) => (
+          {[["", "April 19, 2026"], ["", "Lucknow"], ["", "Venue: SureStay By Best Western"]].map(([icon, text]) => (
             <span key={text} className="text-white/50 text-sm flex items-center gap-1.5">
               {icon} {text}
             </span>
