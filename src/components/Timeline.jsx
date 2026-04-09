@@ -1,14 +1,25 @@
 import React from 'react'
 
+// 9am  -> opening session
+// 10am -> introduction to electronics and soldering workshop
+// 11am -> blinky workshop
+// 1pm  -> lunch and break
+// 1:45pm  -> fun activities
+// 3pm  -> console workshop
+// 5pm  -> snacks and reward/gifts distribution
+// 6pm  -> closing
+
 const slots = [
-  { time: "9:00 AM",  label: "Opening Session",            desc: "Welcome, introductions, and what to expect from the day.", icon: "" },
-  { time: "10:00 AM", label: "Introduction to Electronics", desc: "Basics of circuits, components, and how everything connects.", icon: "" },
-  { time: "11:00 AM", label: "Workshop on Blinky",                desc: "Hands-on build session — get your hands dirty.", icon: "", highlight: true },
-  { time: "1:00 PM",  label: "Lunch & Break",               desc: "Free lunch, snacks, and time to chill with fellow makers.", icon: "" },
-  { time: "2:00 PM",  label: "Workshop on Keychain Gaming Console",                desc: "Second build session — take it further.", icon: "", highlight: true },
-  { time: "4:00 PM",  label: "Electronics Discussion",      desc: "Open floor — talk projects, ideas, and future builds.", icon: "" },
-  { time: "5:00 PM",  label: "Snacks & Closing",            desc: "Wrap up, collect your projects and surprise gifts, say goodbye.", icon: "" },
+  { time: "9:00 AM",  label: "Opening Session",},
+  {time :"10:00 AM" , label:"Introduction To Electronics and soldering workshop" },
+  {time :"11:00 AM" , label:"Blinky Workshop" , highlight:true},
+  {time :"1:00 PM" , label:"Lunch and Break"},
+  {time :"1:45 PM" , label:"Fun Activities"},
+  {time :"3:00 PM" , label :"Console Workshop" , highlight:true},
+  {time :"5:00 PM" , label :"Snacks and rewards distribution"},
+  {time :"6:00 PM" , label :"closing"}
 ]
+
 
 const Timeline = () => {
   return (
