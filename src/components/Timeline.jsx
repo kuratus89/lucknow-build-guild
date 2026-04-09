@@ -11,13 +11,13 @@ import React from 'react'
 
 const slots = [
   { time: "9:00 AM",  label: "Opening Session",},
-  {time :"10:00 AM" , label:"Introduction To Electronics and soldering workshop" },
+  {time :"10:00 AM" , label:"Introduction To Electronics and Soldering Sorkshop" },
   {time :"11:00 AM" , label:"Blinky Workshop" , highlight:true},
   {time :"1:00 PM" , label:"Lunch and Break"},
   {time :"1:45 PM" , label:"Fun Activities"},
   {time :"3:00 PM" , label :"Console Workshop" , highlight:true},
-  {time :"5:00 PM" , label :"Snacks and rewards distribution"},
-  {time :"6:00 PM" , label :"closing"}
+  {time :"5:00 PM" , label :"Snacks and Rewards Distribution"},
+  {time :"6:00 PM" , label :"Closing"}
 ]
 
 
