@@ -82,13 +82,17 @@ const Herosec = () => {
         </div>
         
         <h1 className = "text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold mb-3 leading-[1.1]">
-  
-          {[["", "April 19, 2026"], ["", "Lucknow"], ["", "Venue: SureStay By Best Western"]].map(([icon, text]) => (
-            <span key={text} className="text-white/50 text-sm flex items-center gap-1.5">
-              {icon} {text}
-            </span>
-          ))}
-          </h1>
+            April 19 , 2026
+        </h1>
+        <h1 className = "text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold mb-3 leading-[1.1]">
+          Lucknow
+        </h1>
+        <h1 className = "text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold mb-3 leading-[1.1]">
+          Venue: 
+        <a href = "https://maps.app.goo.gl/XbxCHNpcfV8uET5N8">
+          SureStay By Best Western
+        </a>
+        </h1>
 
 
       </div>
