@@ -55,7 +55,7 @@ const Herosec = () => {
         <h2 className="text-lg sm:text-xl md:text-2xl font-semibold text-white/80 mb-4 leading-snug">
         Only for teenagers 13-18 year old!
         </h2>
-  
+        
 
         <div className="flex flex-wrap gap-4 mb-8">
           <a href="https://blueprint.hackclub.com/guilds/invite/lucknow"
@@ -80,14 +80,18 @@ const Herosec = () => {
           <p className="text-white/40 text-xs uppercase tracking-widest mb-3">Event starts in</p>
           <Countdown />
         </div>
-
+        
         <div className="flex flex-wrap gap-4 pt-6 border-t border-[#657795]/30">
+        <h1 className = "text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold mb-3 leading-[1.1]">
+  
           {[["", "April 19, 2026"], ["", "Lucknow"], ["", "Venue: SureStay By Best Western"]].map(([icon, text]) => (
             <span key={text} className="text-white/50 text-sm flex items-center gap-1.5">
               {icon} {text}
             </span>
           ))}
+          </h1>
         </div>
+
 
       </div>
     </div>
