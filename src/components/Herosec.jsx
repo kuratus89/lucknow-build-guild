@@ -81,7 +81,6 @@ const Herosec = () => {
           <Countdown />
         </div>
         
-        <div className="flex flex-wrap gap-4 pt-6 border-t border-[#657795]/30">
         <h1 className = "text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold mb-3 leading-[1.1]">
   
           {[["", "April 19, 2026"], ["", "Lucknow"], ["", "Venue: SureStay By Best Western"]].map(([icon, text]) => (
@@ -90,7 +89,6 @@ const Herosec = () => {
             </span>
           ))}
           </h1>
-        </div>
 
 
       </div>
