@@ -37,8 +37,8 @@ const Countdown = () => {
 
 const Herosec = () => {
   return (
-    <div className="w-full md:min-h-screen text-[#FACC15] px-6 md:px-12 flex items-center">
-      <div className="w-full md:w-3/5 flex flex-col pt-20 pb-6 md:pb-0">
+    <div className="w-full md:min-h-screen text-[#FACC15] px-6 md:px-12 flex items-center py-24">
+      <div className="w-full md:w-3/5 flex flex-col">
 
         <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold mb-3 leading-[1.1]">
           Want to create your first device?
