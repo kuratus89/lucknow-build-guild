@@ -78,6 +78,9 @@ const Herosec = () => {
           Venue
           </a> */}
         </div>
+
+        <div className = "flex flex-col xl:flex-row xl:items-center bg-white/5 border border-[#657795]/20 p-6 md:p-8 rounded-2xl max-w-fit backdrop-blur-sm">
+
         <div className="w-full xl:w-auto pb-8 xl:pb-0 xl:pr-8 border-b xl:border-b-0 xl:border-r border-[#657795]/30">
           <p className="text-white/40 text-xs uppercase tracking-widest mb-3">Event starts in</p>
           <Countdown />
@@ -91,11 +94,11 @@ const Herosec = () => {
             </span>
 
             <span className ="text-white font-bold text-lg">
-              April 19,2026
+              April 19, 2026
             </span>
 
             <span className = "text-white/60 font-medium">
-            Lucknow , UP
+            Lucknow, UP
             </span>
           </div>
 
@@ -105,7 +108,7 @@ const Herosec = () => {
             </span>
 
             <a href="https://maps.app.goo.gl/XbxCHNpcfV8uET5N8" target = "_blank" rel = "noreferrer" className = "text-white font-bold text-lg hover:text-[#FACC15] transition-colors flex flex-col group">
-              <spam> SureStay By Best Western</spam>
+              <span> SureStay By Best Western</span>
               <span className = "text-sm text-white/50 group-hover:text-[#FACC15]/80 transition-colors">
               View on Map ↗
               </span>
@@ -113,7 +116,7 @@ const Herosec = () => {
           </div>
 
         </div>
-
+        </div>
 
       </div>
     </div>
