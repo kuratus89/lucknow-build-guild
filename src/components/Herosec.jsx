@@ -72,27 +72,47 @@ const Herosec = () => {
           <a href = "https://www.instagram.com/lucknow_build_guild/" className = "border border-[#FACC15]/50 text-[FACC15] font-bold text-base px-7 py-3.5 rounded hover:bg-[#FACC15]/10 transition-colors">
           Instagram
           </a>
-          <a href = "https://maps.app.goo.gl/XbxCHNpcfV8uET5N8" className = "border border-[#FACC15]/50 text-[FACC15] font-bold text-base px-7 py-3.5 rounded hover:bg-[#FACC15]/10 transition-colors">
+
+
+          {/* <a href = "https://maps.app.goo.gl/XbxCHNpcfV8uET5N8" className = "border border-[#FACC15]/50 text-[FACC15] font-bold text-base px-7 py-3.5 rounded hover:bg-[#FACC15]/10 transition-colors">
           Venue
-          </a>
+          </a> */}
         </div>
-        <div className="mb-6">
+        <div className="pr-6 xl:border-r border-[#657795]/30">
           <p className="text-white/40 text-xs uppercase tracking-widest mb-3">Event starts in</p>
           <Countdown />
         </div>
         
-        <h1 className = "text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold mb-3 leading-[1.1]">
-            April 19 , 2026
-        </h1>
-        <h1 className = "text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold mb-3 leading-[1.1]">
-          Lucknow
-        </h1>
-        <h1 className = "text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold mb-3 leading-[1.1]">
-          Venue: 
-        <a href = "https://maps.app.goo.gl/XbxCHNpcfV8uET5N8">
-          SureStay By Best Western
-        </a>
-        </h1>
+        <div className = "flex flex-col sm:flex-row gap-6 sm:gap-10">
+
+          <div className="flex flex-col">
+            <span className = "text-[#FACC15] text-xs uppercase tracking-widest mb-1 font-bold">
+              When & where
+            </span>
+
+            <span className ="text-white font-bold text-lg">
+              April 19,2026
+            </span>
+
+            <span className = "text-white/60 font-medium">
+            Lucknow , UP
+            </span>
+          </div>
+
+          <div className = "flex flex-col">
+            <span className = "text-[#FACC15] text-xs uppercase tracking-widest mb-1 font-bold">
+              Venue
+            </span>
+
+            <a href="" target = "_blank" rel = "noreferrer" className = "text-white font-bold text-lg hover:text-[#FACC15] transition-colors flex flex-col group">
+              <spam> SureStay By Best Western</spam>
+              <span className = "text-sm text-white/50 group-hover:text-[#FACC15]/80 transition-colors">
+              View on Map ↗
+              </span>
+            </a>
+          </div>
+          
+        </div>
 
 
       </div>
