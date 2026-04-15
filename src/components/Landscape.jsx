@@ -10,7 +10,7 @@ const Landscape = () => {
     <div className='relative w-screen min-h-screen overflow-hidden flex flex-col md:block'>
 
       {/* Hero text — full width on mobile, left 60% on desktop */}
-      <div className='relative z-10 w-full md:absolute md:inset-0'>
+      <div className='relative z-10 w-full'>
         <Herosec />
       </div>
 
@@ -19,6 +19,7 @@ const Landscape = () => {
         relative z-20
         w-full h-[50vw]
         md:absolute md:top-0 md:right-0 md:w-[55%] md:h-full
+        pointer-events-none
       '>
         <Canvas
           className='w-full h-full'
