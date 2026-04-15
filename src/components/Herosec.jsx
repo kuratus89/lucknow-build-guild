@@ -78,12 +78,12 @@ const Herosec = () => {
           Venue
           </a> */}
         </div>
-        <div className="pr-6 xl:border-r border-[#657795]/30">
+        <div className="w-full xl:w-auto pb-8 xl:pb-0 xl:pr-8 border-b xl:border-b-0 xl:border-r border-[#657795]/30">
           <p className="text-white/40 text-xs uppercase tracking-widest mb-3">Event starts in</p>
           <Countdown />
         </div>
         
-        <div className = "flex flex-col sm:flex-row gap-6 sm:gap-10">
+        <div className = "flex flex-col sm:flex-row gap-8 sm:gap-12 w-full xl:w-auto pt-8 xl:pt-0 xl:pl-8">
 
           <div className="flex flex-col">
             <span className = "text-[#FACC15] text-xs uppercase tracking-widest mb-1 font-bold">
@@ -104,14 +104,14 @@ const Herosec = () => {
               Venue
             </span>
 
-            <a href="" target = "_blank" rel = "noreferrer" className = "text-white font-bold text-lg hover:text-[#FACC15] transition-colors flex flex-col group">
+            <a href="https://maps.app.goo.gl/XbxCHNpcfV8uET5N8" target = "_blank" rel = "noreferrer" className = "text-white font-bold text-lg hover:text-[#FACC15] transition-colors flex flex-col group">
               <spam> SureStay By Best Western</spam>
               <span className = "text-sm text-white/50 group-hover:text-[#FACC15]/80 transition-colors">
               View on Map ↗
               </span>
             </a>
           </div>
-          
+
         </div>
 
 
