@@ -37,8 +37,8 @@ const Countdown = () => {
 
 const Herosec = () => {
   return (
-    <div className="w-full md:h-screen text-[#FACC15] px-6 md:px-12 flex items-center">
-      <div className="w-full md:w-3/5 flex flex-col pt-20 pb-6 md:pb-0">
+    <div className="w-full md:min-h-screen text-[#FACC15] px-6 md:px-12 flex items-center py-24">
+      <div className="w-full md:w-3/5 flex flex-col">
 
         <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold mb-3 leading-[1.1]">
           Want to create your first device?
@@ -55,7 +55,7 @@ const Herosec = () => {
         <h2 className="text-lg sm:text-xl md:text-2xl font-semibold text-white/80 mb-4 leading-snug">
         Only for teenagers 13-18 year old!
         </h2>
-  
+        
 
         <div className="flex flex-wrap gap-4 mb-8">
           <a href="https://blueprint.hackclub.com/guilds/invite/lucknow"
@@ -72,21 +72,50 @@ const Herosec = () => {
           <a href = "https://www.instagram.com/lucknow_build_guild/" className = "border border-[#FACC15]/50 text-[FACC15] font-bold text-base px-7 py-3.5 rounded hover:bg-[#FACC15]/10 transition-colors">
           Instagram
           </a>
-          <a href = "https://maps.app.goo.gl/XbxCHNpcfV8uET5N8" className = "border border-[#FACC15]/50 text-[FACC15] font-bold text-base px-7 py-3.5 rounded hover:bg-[#FACC15]/10 transition-colors">
+
+
+          {/* <a href = "https://maps.app.goo.gl/XbxCHNpcfV8uET5N8" className = "border border-[#FACC15]/50 text-[FACC15] font-bold text-base px-7 py-3.5 rounded hover:bg-[#FACC15]/10 transition-colors">
           Venue
-          </a>
+          </a> */}
         </div>
-        <div className="mb-6">
+
+        <div className = "flex flex-col xl:flex-row xl:items-center bg-white/5 border border-[#657795]/20 p-6 md:p-8 rounded-2xl max-w-fit backdrop-blur-sm">
+
+        <div className="w-full xl:w-auto pb-8 xl:pb-0 xl:pr-8 border-b xl:border-b-0 xl:border-r border-[#657795]/30">
           <p className="text-white/40 text-xs uppercase tracking-widest mb-3">Event starts in</p>
           <Countdown />
         </div>
+        
+        <div className = "flex flex-col sm:flex-row gap-8 sm:gap-12 w-full xl:w-auto pt-8 xl:pt-0 xl:pl-8">
 
-        <div className="flex flex-wrap gap-4 pt-6 border-t border-[#657795]/30">
-          {[["", "April 19, 2026"], ["", "Lucknow"], ["", "Venue: SureStay By Best Western"]].map(([icon, text]) => (
-            <span key={text} className="text-white/50 text-sm flex items-center gap-1.5">
-              {icon} {text}
+          <div className="flex flex-col">
+            <span className = "text-[#FACC15] text-xs uppercase tracking-widest mb-1 font-bold">
+              When & where
             </span>
-          ))}
+
+            <span className ="text-white font-bold text-lg">
+              April 19, 2026
+            </span>
+
+            <span className = "text-white/60 font-medium">
+            Lucknow, UP
+            </span>
+          </div>
+
+          <div className = "flex flex-col">
+            <span className = "text-[#FACC15] text-xs uppercase tracking-widest mb-1 font-bold">
+              Venue
+            </span>
+
+            <a href="https://maps.app.goo.gl/XbxCHNpcfV8uET5N8" target = "_blank" rel = "noreferrer" className = "text-white font-bold text-lg hover:text-[#FACC15] transition-colors flex flex-col group">
+              <span> SureStay By Best Western</span>
+              <span className = "text-sm text-white/50 group-hover:text-[#FACC15]/80 transition-colors">
+              View on Map ↗
+              </span>
+            </a>
+          </div>
+
+        </div>
         </div>
 
       </div>
