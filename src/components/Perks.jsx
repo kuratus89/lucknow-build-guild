@@ -86,10 +86,6 @@ const Perks = () => {
           <p className="text-white font-bold text-lg md:text-xl">All of this, completely free.</p>
           <p className="text-white/40 text-sm">Sponsored by Hack Club. April 19, Lucknow.</p>
         </div>
-        <a href="https://blueprint.hackclub.com/guilds/invite/lucknow"
-          className="bg-[#FACC15] text-[#15294D] font-bold px-8 py-3 rounded hover:bg-yellow-300 transition-colors whitespace-nowrap">
-          Register Now →
-        </a>
       </div>
     </section>
   )
