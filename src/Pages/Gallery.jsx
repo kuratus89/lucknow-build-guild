@@ -1,6 +1,30 @@
 import React, { useEffect, useState } from 'react'
 import Contact from '../components/Contact'
 
+const ImageCard = ({ img, onClick }) => {
+  const [loaded, setLoaded] = useState(false)
+  return (
+    <div
+      className="relative aspect-[4/3] overflow-hidden rounded-xl cursor-pointer border border-[#657795]/30 hover:border-[#FACC15]/50 transition-all duration-300 hover:scale-[1.02]"
+      onClick={onClick}
+    >
+      {/* skeleton frame shown until image loads */}
+      {!loaded && (
+        <div className="absolute inset-0 bg-[#1a2235] animate-pulse rounded-xl" />
+      )}
+      <img
+        src={img.src}
+        alt={img.alt}
+        className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-300 ${loaded ? 'opacity-100' : 'opacity-0'}`}
+        loading="lazy"
+        decoding="async"
+        onLoad={() => setLoaded(true)}
+        onError={() => setLoaded(true)}
+      />
+    </div>
+  )
+}
+
 const Gallery = () => {
   const [allImages, setAllImages] = useState([])
   const [lightbox, setLightbox] = useState(null)
@@ -60,21 +84,9 @@ const Gallery = () => {
         )}
 
         {!loading && !error && allImages.length > 0 && (
-          <div className="columns-1 sm:columns-2 gap-6 space-y-6">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
             {allImages.map((img, idx) => (
-              <div
-                key={img.src}
-                className="break-inside-avoid overflow-hidden rounded-xl cursor-pointer border border-[#657795]/20 hover:border-[#FACC15]/50 transition-all duration-300 hover:scale-[1.02]"
-                onClick={() => openLightbox(idx)}
-              >
-                <img
-                  src={img.src}
-                  alt={img.alt}
-                  className="w-full h-auto object-cover"
-                  loading="lazy"
-                  decoding="async"
-                />
-              </div>
+              <ImageCard key={img.src} img={img} onClick={() => openLightbox(idx)} />
             ))}
           </div>
         )}

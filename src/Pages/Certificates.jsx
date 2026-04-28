@@ -3,6 +3,33 @@ import Contact from '../components/Contact'
 
 const CHUNK_SIZE = 5
 
+const ImageCard = ({ img, onSettled, onClick }) => {
+  const [loaded, setLoaded] = useState(false)
+  const handleSettled = () => {
+    setLoaded(true)
+    onSettled()
+  }
+  return (
+    <div
+      className="relative aspect-[3/4] overflow-hidden rounded-xl cursor-pointer border border-[#657795]/30 hover:border-[#FACC15]/50 transition-all duration-300 hover:scale-[1.02]"
+      onClick={onClick}
+    >
+      {/* skeleton frame shown until image loads */}
+      {!loaded && (
+        <div className="absolute inset-0 bg-[#1a2235] animate-pulse rounded-xl" />
+      )}
+      <img
+        src={img.src}
+        alt={img.alt}
+        className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-300 ${loaded ? 'opacity-100' : 'opacity-0'}`}
+        loading="lazy"
+        onLoad={handleSettled}
+        onError={handleSettled}
+      />
+    </div>
+  )
+}
+
 const Certificates = () => {
   const [allImages, setAllImages] = useState([])
   const [visibleCount, setVisibleCount] = useState(CHUNK_SIZE)
@@ -73,22 +100,14 @@ const Certificates = () => {
         )}
 
         {!loading && !error && images.length > 0 && (
-          <div className="columns-2 sm:columns-3 lg:columns-4 gap-4 space-y-4">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3">
             {images.map((img, idx) => (
-              <div
+              <ImageCard
                 key={img.src}
-                className="break-inside-avoid overflow-hidden rounded-xl cursor-pointer border border-[#657795]/20 hover:border-[#FACC15]/50 transition-all duration-300 hover:scale-[1.02]"
+                img={img}
+                onSettled={handleImageSettled}
                 onClick={() => openLightbox(idx)}
-              >
-                <img
-                  src={img.src}
-                  alt={img.alt}
-                  className="w-full h-auto object-cover"
-                  loading="lazy"
-                  onLoad={handleImageSettled}
-                  onError={handleImageSettled}
-                />
-              </div>
+              />
             ))}
           </div>
         )}
