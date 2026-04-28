@@ -1,11 +1,15 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import Contact from '../components/Contact'
 
+const CHUNK_SIZE = 5
+
 const Certificates = () => {
-  const [images, setImages] = useState([])
+  const [allImages, setAllImages] = useState([])
+  const [visibleCount, setVisibleCount] = useState(CHUNK_SIZE)
   const [lightbox, setLightbox] = useState(null)
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(false)
+  const settledRef = useRef(0)
 
   useEffect(() => {
     fetch('/certificate/manifest.json')
@@ -14,7 +18,7 @@ const Certificates = () => {
         return res.json()
       })
       .then((files) => {
-        setImages(files.map((f) => ({ src: `/certificate/${encodeURIComponent(f)}`, alt: f })))
+        setAllImages(files.map((f) => ({ src: `/certificate/${encodeURIComponent(f)}`, alt: f })))
         setLoading(false)
       })
       .catch(() => {
@@ -22,6 +26,15 @@ const Certificates = () => {
         setLoading(false)
       })
   }, [])
+
+  const images = allImages.slice(0, visibleCount)
+
+  const handleImageSettled = () => {
+    settledRef.current += 1
+    if (settledRef.current >= visibleCount && visibleCount < allImages.length) {
+      setVisibleCount((n) => Math.min(n + CHUNK_SIZE, allImages.length))
+    }
+  }
 
   const openLightbox = (idx) => setLightbox(idx)
   const closeLightbox = () => setLightbox(null)
@@ -72,6 +85,8 @@ const Certificates = () => {
                   alt={img.alt}
                   className="w-full h-auto object-cover"
                   loading="lazy"
+                  onLoad={handleImageSettled}
+                  onError={handleImageSettled}
                 />
               </div>
             ))}
@@ -110,7 +125,7 @@ const Certificates = () => {
             ›
           </button>
           <span className="absolute bottom-4 text-white/40 text-sm">
-            {lightbox + 1} / {images.length}
+            {lightbox + 1} / {allImages.length}
           </span>
         </div>
       )}

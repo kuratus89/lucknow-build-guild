@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import Contact from '../components/Contact'
 
 const CHUNK_SIZE = 5
@@ -9,6 +9,7 @@ const Gallery = () => {
   const [lightbox, setLightbox] = useState(null)
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(false)
+  const settledRef = useRef(0)
 
   useEffect(() => {
     fetch('/gallery/manifest.json')
@@ -27,8 +28,13 @@ const Gallery = () => {
   }, [])
 
   const images = allImages.slice(0, visibleCount)
-  const hasMore = visibleCount < allImages.length
-  const loadMore = () => setVisibleCount((n) => Math.min(n + CHUNK_SIZE, allImages.length))
+
+  const handleImageSettled = () => {
+    settledRef.current += 1
+    if (settledRef.current >= visibleCount && visibleCount < allImages.length) {
+      setVisibleCount((n) => Math.min(n + CHUNK_SIZE, allImages.length))
+    }
+  }
 
   const openLightbox = (idx) => setLightbox(idx)
   const closeLightbox = () => setLightbox(null)
@@ -67,35 +73,24 @@ const Gallery = () => {
         )}
 
         {!loading && !error && images.length > 0 && (
-          <>
-            <div className="columns-1 sm:columns-2 lg:columns-3 gap-6 space-y-6">
-              {images.map((img, idx) => (
-                <div
-                  key={img.src}
-                  className="break-inside-avoid overflow-hidden rounded-xl cursor-pointer border border-[#657795]/20 hover:border-[#FACC15]/50 transition-all duration-300 hover:scale-[1.02]"
-                  onClick={() => openLightbox(idx)}
-                >
-                  <img
-                    src={img.src}
-                    alt={img.alt}
-                    className="w-full h-auto object-cover"
-                    loading="lazy"
-                  />
-                </div>
-              ))}
-            </div>
-
-            {hasMore && (
-              <div className="flex justify-center mt-10">
-                <button
-                  onClick={loadMore}
-                  className="bg-[#FACC15] text-[#15294D] font-bold px-10 py-3 rounded hover:bg-yellow-300 transition-colors"
-                >
-                  Load More ({allImages.length - visibleCount} remaining)
-                </button>
+          <div className="columns-1 sm:columns-2 lg:columns-3 gap-6 space-y-6">
+            {images.map((img, idx) => (
+              <div
+                key={img.src}
+                className="break-inside-avoid overflow-hidden rounded-xl cursor-pointer border border-[#657795]/20 hover:border-[#FACC15]/50 transition-all duration-300 hover:scale-[1.02]"
+                onClick={() => openLightbox(idx)}
+              >
+                <img
+                  src={img.src}
+                  alt={img.alt}
+                  className="w-full h-auto object-cover"
+                  loading="lazy"
+                  onLoad={handleImageSettled}
+                  onError={handleImageSettled}
+                />
               </div>
-            )}
-          </>
+            ))}
+          </div>
         )}
       </div>
 
