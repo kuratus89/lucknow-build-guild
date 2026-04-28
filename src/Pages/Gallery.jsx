@@ -1,15 +1,11 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Contact from '../components/Contact'
-
-const CHUNK_SIZE = 5
 
 const Gallery = () => {
   const [allImages, setAllImages] = useState([])
-  const [visibleCount, setVisibleCount] = useState(CHUNK_SIZE)
   const [lightbox, setLightbox] = useState(null)
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(false)
-  const settledRef = useRef(0)
 
   useEffect(() => {
     fetch('/gallery/manifest.json')
@@ -27,30 +23,21 @@ const Gallery = () => {
       })
   }, [])
 
-  const images = allImages.slice(0, visibleCount)
-
-  const handleImageSettled = () => {
-    settledRef.current += 1
-    if (settledRef.current >= visibleCount && visibleCount < allImages.length) {
-      setVisibleCount((n) => Math.min(n + CHUNK_SIZE, allImages.length))
-    }
-  }
-
   const openLightbox = (idx) => setLightbox(idx)
   const closeLightbox = () => setLightbox(null)
-  const prev = () => setLightbox((i) => (i - 1 + images.length) % images.length)
-  const next = () => setLightbox((i) => (i + 1) % images.length)
+  const prev = () => setLightbox((i) => (i - 1 + allImages.length) % allImages.length)
+  const next = () => setLightbox((i) => (i + 1) % allImages.length)
 
   useEffect(() => {
     if (lightbox === null) return
     const onKey = (e) => {
-      if (e.key === 'ArrowLeft') setLightbox((i) => (i - 1 + images.length) % images.length)
-      else if (e.key === 'ArrowRight') setLightbox((i) => (i + 1) % images.length)
+      if (e.key === 'ArrowLeft') setLightbox((i) => (i - 1 + allImages.length) % allImages.length)
+      else if (e.key === 'ArrowRight') setLightbox((i) => (i + 1) % allImages.length)
       else if (e.key === 'Escape') setLightbox(null)
     }
     window.addEventListener('keydown', onKey)
     return () => window.removeEventListener('keydown', onKey)
-  }, [lightbox, images.length])
+  }, [lightbox, allImages.length])
 
   return (
     <div className="w-full min-h-screen bg-transparent flex flex-col">
@@ -68,13 +55,13 @@ const Gallery = () => {
           <p className="text-red-400/70 text-sm">Failed to load gallery. Please try again later.</p>
         )}
 
-        {!loading && !error && images.length === 0 && (
+        {!loading && !error && allImages.length === 0 && (
           <p className="text-white/40 text-sm">No photos yet. Check back soon!</p>
         )}
 
-        {!loading && !error && images.length > 0 && (
-          <div className="columns-1 sm:columns-2 lg:columns-3 gap-6 space-y-6">
-            {images.map((img, idx) => (
+        {!loading && !error && allImages.length > 0 && (
+          <div className="columns-1 sm:columns-2 gap-6 space-y-6">
+            {allImages.map((img, idx) => (
               <div
                 key={img.src}
                 className="break-inside-avoid overflow-hidden rounded-xl cursor-pointer border border-[#657795]/20 hover:border-[#FACC15]/50 transition-all duration-300 hover:scale-[1.02]"
@@ -85,8 +72,7 @@ const Gallery = () => {
                   alt={img.alt}
                   className="w-full h-auto object-cover"
                   loading="lazy"
-                  onLoad={handleImageSettled}
-                  onError={handleImageSettled}
+                  decoding="async"
                 />
               </div>
             ))}
@@ -113,8 +99,8 @@ const Gallery = () => {
             ‹
           </button>
           <img
-            src={images[lightbox].src}
-            alt={images[lightbox].alt}
+            src={allImages[lightbox].src}
+            alt={allImages[lightbox].alt}
             className="max-h-[90vh] max-w-[90vw] rounded-xl object-contain"
             onClick={(e) => e.stopPropagation()}
           />
