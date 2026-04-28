@@ -32,13 +32,14 @@ const About = () => (
       <div className="bg-white/5 rounded-2xl p-8 md:p-12 border border-white/10 max-w-3xl">
         <h2 className="text-[#FACC15] font-extrabold text-2xl md:text-4xl mb-4">About the Event</h2>
         <p className="text-white/80 text-base md:text-lg leading-relaxed">
-          Blueprint Lucknow Guild is a free, one-day hardware workshop and meetup for teens aged 13–18, 
-          organized in Lucknow and sponsored by Hack Club. Attendees build real electronics from scratch, 
-          meet fellow makers, and leave with two projects they built themselves — plus surprise gifts.
+          Blueprint Lucknow Guild was a free, one-day hardware workshop and meetup for teens aged 13–18, 
+          organized in Lucknow and sponsored by Hack Club. Attendees built real electronics from scratch, 
+          met fellow makers, and left with two projects they built themselves — plus surprise gifts.
+          The event took place on April 19, 2026.
         </p>
-        <a href="https://blueprint.hackclub.com/guilds/invite/lucknow"
+        <a href="/gallery"
           className="inline-block mt-6 bg-[#FACC15] text-[#0A365D] font-bold px-6 py-3 rounded hover:bg-yellow-300 transition-colors">
-          Register for April 19 →
+          View Gallery →
         </a>
       </div>
     </div>

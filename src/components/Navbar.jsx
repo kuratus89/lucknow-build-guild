@@ -14,6 +14,8 @@ const Navbar = () => {
   const links = [
     { label: "HOME", path: "/" },
     { label: "ABOUT US", path: "/about" },
+    { label: "GALLERY", path: "/gallery" },
+    { label: "CERTIFICATES", path: "/certificates" },
     { label: "HELP US", path: "/helpus" },
     { label: "FAQs", path: "/faqs" },
   ];
@@ -42,10 +44,6 @@ const Navbar = () => {
               {item.label}
             </Link>
           ))}
-          <a href="https://blueprint.hackclub.com/guilds/invite/lucknow"
-            className="bg-[#FACC15] text-[#15294D] font-bold px-5 py-2 rounded text-sm hover:bg-yellow-300 transition-colors">
-            JOIN US
-          </a>
         </div>
 
         <button className="md:hidden flex flex-col gap-1.5 p-2" onClick={() => setOpen(!open)}>
@@ -63,10 +61,6 @@ const Navbar = () => {
               {item.label}
             </Link>
           ))}
-          <a href="https://blueprint.hackclub.com/guilds/invite/lucknow"
-            className="bg-[#FACC15] text-[#15294D] font-bold px-4 py-2 rounded text-sm text-center">
-            JOIN US
-          </a>
         </div>
       )}
     </nav>
